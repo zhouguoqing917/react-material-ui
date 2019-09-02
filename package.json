@@ -1,0 +1,101 @@
+{
+  "name": "react-material-ui",
+  "version": "1.0.0",
+  "licence": "MIT",
+  "author": "zhouguoqing",
+  "email": "zhouguoqing917@gmail.com",
+  "description": "Material Kit React",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint:check": "eslint . --ext=js,jsx;  exit 0",
+    "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "build-package-css": "node-sass src/assets/scss/material-kit-react.scss dist/material-kit-react.css",
+    "build-package": "npm run build-package-css && babel src --out-dir dist",
+    "serve": "cross-env NODE_ENV=production serve -s build",
+    "docs": "cross-env NODE_ENV=production docsify serve docs -p=4000",
+    "mock": "yarn install && cross-env NODE_ENV=mock  node ./server/mock-server.js",
+    "compile-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.css",
+    "minify-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.min.css --output-style compressed",
+    "map-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.css --source-map true"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "4.3.2",
+    "@material-ui/icons": "4.2.1",
+    "@material-ui/styles": "4.2.1",
+    "address": "^1.1.2",
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "chart.js": "2.8.0",
+    "classnames": "^2.2.6",
+    "clsx": "^1.0.4",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "history": "4.9.0",
+    "http-errors": "^1.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mockjs": "^1.0.1-beta3",
+    "moment": "2.24.0",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
+    "node-sass": "4.12.0",
+    "nouislider": "14.0.2",
+    "perfect-scrollbar": "1.4.0",
+    "prettier": "^1.18.2",
+    "prop-types": "15.7.2",
+    "rc-upload": "^2.7.0",
+    "react": "16.9.0",
+    "react-chartjs-2": "2.7.6",
+    "react-datetime": "2.16.3",
+    "react-dom": "16.9.0",
+    "react-router-dom": "5.0.1",
+    "react-scripts": "3.1.0",
+    "react-slick": "0.25.2",
+    "react-swipeable-views": "0.13.3",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "serve": "^11.1.0",
+    "sqlite3": "^4.1.0",
+    "uuid": "^3.3.2",
+    "validate.js": "0.13.0",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.5.5",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "@babel/preset-react": "7.0.0",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-optimize-clsx": "^2.3.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3"
+  },
+  "optionalDependencies": {
+    "typescript": "3.5.3"
+  }
+}
